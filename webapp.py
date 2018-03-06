@@ -49,6 +49,7 @@ def login():
 @app.route('/logout')
 def logout():
     session.clear()
+    flash("You're logged out")
     return render_template('home.html')
 
 @app.route('/login/authorized')#the route should match the callback URL registered with the OAuth provider
